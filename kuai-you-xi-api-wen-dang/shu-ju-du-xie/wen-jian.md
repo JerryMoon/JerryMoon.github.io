@@ -239,7 +239,7 @@ qg.deleteFile({
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | String | 是 | 需要读取的本地文件uri，不能是tmp类型的uri |
-| encoding | String | 否 | 编码格式，默认UTF-8 |
+| encoding | String | 否 | 编码格式，encoding 的合法值: utf8 ， binary 。默认 utf8 |
 | success | Function | 否 | 成功回调 |
 | fail | Function | 否 | 失败回调 |
 | complete | Function | 否 | 执行结束后的回调 |
@@ -263,6 +263,7 @@ qg.deleteFile({
 ```javascript
 qg.readFile({
     uri: 'internal://files/work/demo.txt',
+    encoding: 'utf8',
     success: function (data) {
         console.log('text: '+ data.text)
     },
@@ -282,7 +283,7 @@ qg.readFile({
 | --- | --- | --- | --- |
 | uri | String | 是 | 需要写入的文件uri，不能是应用资源路径和tmp类型的uri |
 | text | String | 是 | 需要写入的字符串 |
-| encoding | String | 否 | 编码格式，默认UTF-8 |
+| encoding | String | 否 | 编码格式， 默认utf8 |
 | success | Function | 否 | 成功回调 |
 | fail | Function | 否 | 失败回调 |
 | complete | Function | 否 | 执行结束后的回调 |
@@ -318,7 +319,7 @@ qg.writeFile({
 | --- | --- | --- | --- |
 | uri | String | 是 | 需要追加的文件uri，不能是应用资源路径和tmp类型的uri |
 | text | String | 是 | 需要写入的字符串 |
-| encoding | String | 否 | 编码格式，默认UTF-8 |
+| encoding | String | 否 | 编码格式，默认utf8 |
 | success | Function | 否 | 成功回调 |
 | fail | Function | 否 | 失败回调 |
 | complete | Function | 否 | 执行结束后的回调 |
