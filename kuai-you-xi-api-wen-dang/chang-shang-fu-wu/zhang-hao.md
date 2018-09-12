@@ -71,7 +71,7 @@
         })
 ```
 
-### qg.getAccountProfile(Object object)
+### qg.getProfile(Object object)
 
 获得用户基本信息。
 

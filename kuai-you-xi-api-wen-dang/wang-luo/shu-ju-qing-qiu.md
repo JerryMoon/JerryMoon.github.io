@@ -8,8 +8,51 @@
 
 #### 参数：
 
-建议使用标准的XMLHttpRequest参数，请查看相关 API 文档
-https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest
+| 参数名       | 类型     | 必填 | 说明                                                         |
+| ------------ | -------- | ---- | ------------------------------------------------------------ |
+| url          | String   | 是   | 资源url                                                      |
+| header       | Object   | 否   | 请求的header |
+| method       | String   | 否   | 默认为POST，可以是： POST, PUT                               |
+| data | String    | 否   | 	请求的参数                                |
+| success      | Function | 否   | 成功返回的回调函数                                           |
+| fail         | Function | 否   | 失败的回调函数                                               |
+| complete     | Function | 否   | 结束的回调函数（调用成功、失败都会执行）    
+
+##### method参数：
+
+| 值       |  说明                                                         |
+| ------------ | -------- | ---- | ------------------------------------------------------------ |
+| GET          | HTTP 请求 GET           
+| HEAD          | HTTP 请求 HEAD         
+| POST          | HTTP 请求 POST         
+| PUT          | HTTP 请求 PUT         
+| DELETE          | HTTP 请求 DELETE          
+| TRACE          | HTTP 请求 TRACE      
+| DELETE          | HTTP 请求 DELETE      
+| CONNECT          | HTTP 请求 CONNECT                                                
+
+##### object.dataType 的合法值：
+
+| 值       |  说明                                                         |
+| ------------ | -------- | ---- | ------------------------------------------------------------ |
+| json          | 返回的数据为 JSON，返回后会对返回的数据进行一次 JSON.parse           
+| arraybuffer          | 返回的数据为 ArrayBuffer         
+| string          | 返回的数据为 String     
+
+##### success 回调函数：
+
+| 属性      | 类型     | 说明                                                         |
+| ------------ | -------- | ---- | ------------------------------------------------------------ |
+| data          | string/Object/Arraybuffer   | 返回的数据
+| header          | string/Object/Arraybuffer   | 返回的 HTTP Response Header
+
+##### fail 回调函数：
+
+| 属性      | 类型     | 说明                                                         |
+| ------------ | -------- | ---- | ------------------------------------------------------------ |
+| data          | string/Object/Arraybuffer   | 返回的数据
+| code          | string   | 返回的错误码
+
 
 
 #### 返回值
@@ -25,13 +68,18 @@ DownloadTask.abort()
 
 ```javascript
 var requestTask = qg.request({
-    url: 'http://www.example.com',
-    success: function (msg) {
-        console.log("request success " + msg)
-    },
-    fail: function (msg) {
-        console.log("request fail, errMsg =" + msg["errMsg"])
-    }
-});
+            url: "http://api.vivo.xyz/mockApi/mock/api/user/isLogin.do",
+            dataType: 'text', // dataType可取值：text, json, arraybuffer, 表示success的回调参数对象ret的data属性是分别是：String Object ArrayBuffer类型
+            success: function(ret) {
+                qg.showToast({
+                    message: " request success " + ret.data
+                });
+            },
+            fail: function(msg,code) {
+                qg.showToast({
+                    message: " request fail, errMsg =" + msg
+                });
+            }
+        });
 requestTask.abort();
 ```
