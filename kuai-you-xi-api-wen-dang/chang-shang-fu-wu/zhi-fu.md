@@ -13,7 +13,7 @@
 
 | 参数名      | 类型       | 必填   | 说明       |
 | -------- | -------- | ---- | -------- |
-| orderInfo | string | 是    | 订单信息。|
+| orderInfo | string | 是    | 订单信息。支付服务器返回的订单json字符串|
 | success | Function | 否    | 成功回调。 |
 | fail | Function | 否    | 失败回调。 |
 | complete | Function | 否    | 执行结束后的回调。 |

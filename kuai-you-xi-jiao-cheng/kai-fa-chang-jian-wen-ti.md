@@ -2,23 +2,25 @@
 ---
 
 ###Q1：快游戏如何基于h5游戏开发?
-游戏如果是按照h5标准开发的适配难度不大，通过cocos creator导出vivo快游戏
-理论上，没有其他功能，只需要接账号和支付，相关api可参看-快游戏API文档
+游戏如果是按照h5标准开发的适配难度不大
+理论上，没有其他功能，只需要接账号和支付，相关api可参看-快游戏API文档-账号/支付
 
 
 ###Q2：有没有游戏引擎导出快游戏的插件？
-我们这边有导出快游戏的插件，请参考快游戏教程-IDE接入说明-cocos creator接入说明
+已有cocos creator导出快游戏的插件，具体请参考快游戏教程-IDE接入说明-cocos creator接入说明
 
 
 ###Q3：目前有支持哪些游戏引擎？
-目前支持cocos creator引擎开发
-后续考虑接入其他引擎服务商
+IDE支持cocos creator开发的游戏导出为快游戏，后续考虑接入其他引擎服务商IDE，
+对于使用Laya、egret引擎的游戏开发者，我们会提供对接操作手册，也可以经过适配，转换为快游戏
 
 
 ###Q4：快游戏运行不起来，调试有问题，怎么办？
 **首先确认环境问题：**
 1.是否vivo手机，如果不是vivo手机，可能会不支持
+
 2.是否安装最新的调试器apk和快游戏引擎apk，注意是要安装两个app到vivo手机上
+
 3.是否调试时，手机和电脑处于同一个wifi网络情况下，如果网络问题解决不了，可以使用调试器的本地打开功能，把打包好的游戏rpk文件导入到sd卡进行打开
 
 **最新的工具和调试器下载地址：**
@@ -47,6 +49,14 @@ https://dev.vivo.com.cn/documentCenter/doc/144
 PS：如果接入账号，需要提供账号服务器的回调地址
 （code复杂模式需要，token简化模式登录不需要服务器对接）
 
+**建议调用账号流程：**
+1.首次登录，调用api：qg.authorize；
+
+2.弹出授权框，收到授权回调后，获取到token，调用qg.getProfile，完成登录，同时把token存于本地；
+
+3.再次登录，取出上次保存的token，如果此token还在有效期，则先调用qg.getProfile，如果获取失败，重新发起授权，如果获取成功，则可提示完成登录
+
+4.如果用户已授权，不建议每次登录都调用授权页面，尽量避免重复调用授权接口
 
 ###Q7：cocos2d-js开发的游戏 能转成快游戏么？
 http://docs.cocos.com/creator/manual/zh/getting-started/cocos2d-x-guide.html 这里是相关的文档
@@ -71,5 +81,7 @@ cocos2d-js 在三年前已经进入维护阶段了，不再添加新功能，所
 参考api接口（qg.getNotchHeight）
 https://jerrymoon.github.io/kuai-you-xi-api-wen-dang/xi-tong-neng-li/she-bei-xin-xi.html
 
- 
+###Q11.分享、好友、广告功能有开放么？
+目前都在计划中，暂时未对外开放，快游戏具体相关支持的功能，请参看API文档，其中开放的功能都在API文档中，如果API文档没有，则暂时未开放。
+
 

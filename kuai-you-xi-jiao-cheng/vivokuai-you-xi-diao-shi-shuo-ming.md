@@ -23,4 +23,4 @@
 
 ## Q&A
 1. 暂不支持浏览器调试
-2. 使用adb logcat -s jswrapper过滤js中的console.log。
+2. 使用adb logcat -s jswrapper过滤js中的console.log（修改manifest里的log级别改为trace）
