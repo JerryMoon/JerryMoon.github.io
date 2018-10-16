@@ -21,6 +21,8 @@
 * 点击“本地安装”
 * 从手机SD中找到rpk文件，选择打开。
 
+## chrome浏览器真机调试
+具体参见：[chrome调试快游戏代码说明](/kuai-you-xi-jiao-cheng/chromediao-shi-kuai-you-xi-dai-ma-shuo-ming.md)
+
 ## Q&A
-1. 暂不支持浏览器调试
-2. 使用adb logcat -s jswrapper过滤js中的console.log（修改manifest里的log级别改为trace）
+1. 使用adb logcat -s jswrapper过滤js中的console.log（修改manifest里的log级别改为trace）
