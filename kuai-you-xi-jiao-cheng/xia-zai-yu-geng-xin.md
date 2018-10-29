@@ -1,5 +1,18 @@
 # 快游戏工具发布
 
+##2018.10.29
+---
+###下载链接
+* 快游戏调试器(无更新)：[quickapp_debugger.apk](https://statres.quickapp.cn/quickapp/quickapp/201806/file/quickapp_debugger.apk)
+* 快游戏引擎(无更新)：[com.vivo.hybrid_v1.2.0.1-RC-50_496ac15_201809101717.apk](https://github.com/JerryMoon/JerryMoon.github.io/raw/master/res/apk/com.vivo.hybrid_v1.2.0.1-RC-50_496ac15_201809101717.apk)
+* cocos creator(无更新)：
+#####windows版本：[v2.0.2-alpha.1.7z](http://47.98.62.68/cocos-runtime-demo/creator/CocosCreator_v2.0.2-alpha.1.7z)
+#####mac版本：[v2.0.2-alpha.1.7z](http://47.98.62.68/cocos-runtime-demo/creator/CocosCreator_v2.0.2-alpha.1_20180726.dmg?nsukey=xVTTNtSZ2MkDihu%2Fi1%2B9PKu4W4hYN88fNXvKEus%2B1B9gsbQ1gjHsJWa1DidZpnasf2oxuDzpSz46sIwnEJ0oqekJ%2FYOXddGoubS1ccuPuVDXe5XOIiojlFGfj5VBUgDmXpU1s62oRJxu4ml0HpK1jV2BHk%2BMvjcNjHFyhYpJEnXieawxIqOqOZh116szfDAZemNqQn7Dzqv9%2FaGB6D%2F8ww%3D%3D)
+* cocos creator插件：[runtime-packer_1029](https://github.com/JerryMoon/JerryMoon.github.io/raw/master/res/cocos-creator/runtime-packer_1029.zip)
+* 支持chrome调试版本快游戏引擎(无更新)：[vivo_v1.2.1.1-RC-52_201810151438_chrome.apk](https://github.com/JerryMoon/JerryMoon.github.io/raw/master/res/apk/vivo_v1.2.1.1-RC-52_201810151438_chrome.apk)
+
+
+
 ##2018.10.17
 ---
 ###下载链接
