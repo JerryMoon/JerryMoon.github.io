@@ -1,7 +1,7 @@
-# vivo快游戏打包工具说明
+# vivo小游戏打包工具说明
 ---
 
-## 快游戏开发者工具[qgame-toolkit](https://www.npmjs.com/package/qgame-toolkit)
+## vivo小游戏开发者工具[qgame-toolkit](https://www.npmjs.com/package/qgame-toolkit)
 
 1.全局安装qgame-toolkit
 
@@ -55,4 +55,4 @@ npm run release
 openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out certificate.pem
 ```
 
-在快游戏工程的sign目录下创建release目录，将私钥文件private.pem和证书文件certificate.pem拷贝进去。
+在vivo小游戏工程的sign目录下创建release目录，将私钥文件private.pem和证书文件certificate.pem拷贝进去。

@@ -1,28 +1,30 @@
 ## cocos creator接入说明
 
-### creator集成快游戏开发插件
+### creator集成vivo小游戏开发插件
 
-[下载cocos creator快游戏插件runtime-packer](/kuai-you-xi-jiao-cheng/xia-zai-yu-geng-xin.md)，将解压后的runtime-packer文件夹放到cocos creator(需要2.0.2之上的版本，[点击下载](/kuai-you-xi-jiao-cheng/xia-zai-yu-geng-xin.md))编辑器安装路径下的 Resources/builtin 目录，重启creator即可。
+Cocos Creator 从2.0.5版本开始内置vivo小游戏开发插件，无需再手动集成。
+
+对于 Cocos Creator 2.0.2版本，需要手动集成vivo小游戏开发插件。步骤如下：[下载cocos creator的vivo小游戏插件runtime-packer](/kuai-you-xi-jiao-cheng/xia-zai-yu-geng-xin.md)，将解压后的runtime-packer文件夹放到cocos creator(需要2.0.2的版本，[点击下载](/kuai-you-xi-jiao-cheng/xia-zai-yu-geng-xin.md))编辑器安装路径下的 Resources/builtin 目录，重启creator即可。
 
 ### creator中添加release签名
 
-在快游戏工程根目录中，添加build-templates/jsb-link目录，并在该目录中放置sign目录，在sign目录中放置release目录，在release目录中放置你的私钥文件private.pem和证书文件certificate.pem。
+在vivo小游戏工程根目录中，添加build-templates/jsb-link目录，并在该目录中放置sign目录，在sign目录中放置release目录，在release目录中放置你的私钥文件private.pem和证书文件certificate.pem。
 最终的目录结构如：build-templates/jsb-link/sign/release/certificate.pem，如下图：
 ![](/assets/g1M01DF38wKgcQlt-H6WALG1dAAG-8C1NA74174.png)
 
 
-### creator导出快游戏项目
+### creator导出vivo小游戏项目
 
-使用creator构建项目时，在构建UI界面，发布平台选择`vivo 快游戏`，填写应用包名、应用名称、应用图标、应用版本名称、应用版本号、支持的最小引擎平台版本号（注意：请填写**1020**），这些信息为必填项。
-构建完成后，点击发布路径后的"打开"按钮，发布路径下的qgame目录就是导出快游戏工程目录，如：默认发布路径是build，快游戏工程目录则为build/qgame。
+使用creator构建项目时，在构建UI界面，发布平台选择`Vivo Mini Game`，填写应用包名、应用名称、应用图标、应用版本名称、应用版本号、支持的最小引擎平台版本号（注意：请填写**1020**），这些信息为必填项。
+构建完成后，点击发布路径后的"打开"按钮，发布路径下的qgame目录就是导出vivo小游戏工程目录，如：默认发布路径是build，vivo小游戏工程目录则为build/qgame。
 
 #### 应用图标
 
-在构建时，应用图标将会导出到快游戏的工程里，请确保填写的应用图标路径下的图片真实存在。如：填写的应用图标路径为/assets/image/logo.png，则在creator的资源管理器assets目录下需要存在image目录和logo.png图片。
+在构建时，应用图标将会导出到vivo小游戏的工程里，请确保填写的应用图标路径下的图片真实存在。如：填写的应用图标路径为/assets/image/logo.png，则在creator的资源管理器assets目录下需要存在image目录和logo.png图片。
 
 #### 本地npm安装路径
 
-本地npm安装路径是非必填项。填写的npm安装路径的目的是在creator构建导出可运行的快游戏rpk包，rpk包位于快游戏工程qgame下的dist目录里。如果不填写，则creator只会导出快游戏工程目录。
+本地npm安装路径是非必填项。填写的npm安装路径的目的是在creator构建导出可运行的vivo小游戏rpk包，rpk包位于vivo小游戏工程qgame下的dist目录里。如果不填写，则creator只会导出vivo小游戏工程目录。
 
 获取本地的npm的安装路径的命令：
 
@@ -40,7 +42,7 @@ which npm
 
 #### 小包模式配置（runtime-packager_1029版本开始支持）
 
-快游戏的包内体积不能超过 4M，包含代码和资源，资源可以通过网络请求加载。 Cocos Creator 的小包模式就是帮助开发者将脚本文件保留在快游戏包内，其他资源都从远程服务器按需下载。而远程资源的下载、缓存和版本管理，其实在 Cocos Creator 中，已经帮开发者做好了。
+vivo小游戏的包内体积不能超过 4M，包含代码和资源，资源可以通过网络请求加载。 Cocos Creator 的小包模式就是帮助开发者将脚本文件保留在vivo小游戏包内，其他资源都从远程服务器按需下载。而远程资源的下载、缓存和版本管理，其实在 Cocos Creator 中，已经帮开发者做好了。
 
 具体来说，开发者需要做的是：
 

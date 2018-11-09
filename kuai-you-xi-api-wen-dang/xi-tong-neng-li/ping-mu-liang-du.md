@@ -122,7 +122,7 @@ qg.setScreenBrightnessMode({
 
 ### qg.setKeepScreenOn\(Object object\)
 
-设置是否保持常亮状态。仅在当前快游戏生效，离开快游戏后设置失效。
+设置是否保持常亮状态。仅在当前vivo小游戏生效，离开vivo小游戏后设置失效。
 
 #### 参数：
 

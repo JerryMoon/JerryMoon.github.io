@@ -35,7 +35,7 @@
 
 ```js
 qg.showKeyboard({
-    defaultValue:"快游戏",
+    defaultValue:"vivo小游戏",
     maxLength : 500,
     multiple:true,
     confirmHold:false,
