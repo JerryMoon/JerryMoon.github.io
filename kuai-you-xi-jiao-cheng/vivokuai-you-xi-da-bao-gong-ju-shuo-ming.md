@@ -1,4 +1,5 @@
 # vivo小游戏打包工具说明
+
 ---
 
 ## vivo小游戏开发者工具[qgame-toolkit](https://www.npmjs.com/package/qgame-toolkit)
@@ -56,3 +57,12 @@ openssl req -newkey rsa:2048 -nodes -keyout private.pem -x509 -days 3650 -out ce
 ```
 
 在vivo小游戏工程的sign目录下创建release目录，将私钥文件private.pem和证书文件certificate.pem拷贝进去。
+
+**注意：**
+
+上传的游戏包必须为release签名打包，请妥善保管好生成的release签名，后续更新游戏时，必须与首次传包使用的release签名保持一致才能上传
+
+
+
+
+
